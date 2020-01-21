@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+        Title="MainWindow" Height="768" Width="1366">
+    <Grid Background="Black">
+        <local:SplashScreen HorizontalAlignment="Center" Height="337.5" VerticalAlignment="Center" Width="600"/>
+    </Grid>
 </Window>
