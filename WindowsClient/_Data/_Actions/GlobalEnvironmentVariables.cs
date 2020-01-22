@@ -1,22 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsClient._Data._Actions
 {
     public static class GlobalEnvironmentVariables
     {
-        public static bool Set(string variable, string value)
+        public static void Set(string variable, string h1, float latitude, float longitude)
         {
-            if (value.Split(',').Length == 3)
-            {
-                Environment.SetEnvironmentVariable(variable, value, EnvironmentVariableTarget.Machine);
-
-                return true;
-            }
-            else return false;
+            Environment.SetEnvironmentVariable(variable, $"{h1},{latitude},{longitude}", EnvironmentVariableTarget.Machine);
         }
 
         public static string Get(string variable)
