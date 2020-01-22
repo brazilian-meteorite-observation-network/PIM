@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsClient.utils
+namespace WindowsClient._Data._Actions
 {
     public static class GlobalEnvironmentVariables
     {
-        public static void Set(string variable, string value)
+        public static bool Set(string variable, string value)
         {
-            Environment.SetEnvironmentVariable(variable, value, EnvironmentVariableTarget.Machine);
+            if (value.Split(',').Length == 3)
+            {
+                Environment.SetEnvironmentVariable(variable, value, EnvironmentVariableTarget.Machine);
+
+                return true;
+            }
+            else return false;
         }
 
         public static string Get(string variable)
         {
             return Environment.GetEnvironmentVariable(variable, EnvironmentVariableTarget.Machine);
-        }
-
-        public static void Remove(string variable)
-        {
-            Environment.SetEnvironmentVariable(variable, null, EnvironmentVariableTarget.Machine);
         }
     }
 }
