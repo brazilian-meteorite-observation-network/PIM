@@ -60,8 +60,8 @@
     <Compile Include="SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TragectoryCalculator.xaml.cs">
-      <DependentUpon>TragectoryCalculator.xaml</DependentUpon>
+    <Compile Include="TrajectoryCalculator.xaml.cs">
+      <DependentUpon>TrajectoryCalculator.xaml</DependentUpon>
     </Compile>
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
     <Page Include="MainWindow.xaml">
@@ -80,7 +80,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TragectoryCalculator.xaml">
+    <Page Include="TrajectoryCalculator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,7 +113,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="utils\" />
     <Folder Include="_Data\_Connections\" />
     <Folder Include="_Data\_Objects\" />
   </ItemGroup>
