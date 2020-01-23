@@ -11,9 +11,15 @@ namespace WindowsClient._Data._Actions
         /// <param name="latitude">Object's latitude</param>
         /// <param name="longitude">Object's longitude</param>
         /// <param name="height">Object's height</param>
-        public static void Set(string variable, float latitude, float longitude, string height)
+        public static bool Set(string variable, float latitude, float longitude, float height)
         {
-            Environment.SetEnvironmentVariable(variable, $"{latitude},{longitude},{height}", EnvironmentVariableTarget.Machine);
+            if (!string.IsNullOrEmpty(variable))
+            {
+                Environment.SetEnvironmentVariable(variable, $"${variable},{latitude},{longitude},{height}", EnvironmentVariableTarget.Machine);
+
+                return true;
+            }
+            else return false;
         }
 
         /// <summary>
