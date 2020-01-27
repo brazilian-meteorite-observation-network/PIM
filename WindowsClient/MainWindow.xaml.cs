@@ -25,5 +25,12 @@ namespace WindowsClient
         {
             InitializeComponent();
         }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            Default frm = new Default();
+            frm.Show();
+            this.Close();
+        }
     }
 }
