@@ -35,6 +35,9 @@
                 </Grid>
             </Label>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Width="200" Margin="0,176,0,0" Source="_Data/_Media/_Img/splash-screen-pim.png"/>
+        <Grid HorizontalAlignment="Left" Margin="0,176,0,0" Width="200">
+            <Image Height="132" Margin="34,0,39,87" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
+            <Image Margin="34,0,39,29" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="39" VerticalAlignment="Bottom"/>
+        </Grid>
     </Grid>
 </Window>

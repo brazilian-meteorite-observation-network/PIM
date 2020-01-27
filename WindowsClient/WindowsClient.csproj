@@ -121,5 +121,9 @@
     <Resource Include="_Data\_Media\_Img\question.png" />
     <Resource Include="_Data\_Media\_Img\server.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Data\_Media\_Img\bramon-nome.png" />
+    <Resource Include="_Data\_Media\_Img\bramon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
