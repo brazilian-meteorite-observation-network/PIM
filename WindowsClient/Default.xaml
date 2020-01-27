@@ -5,16 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
         mc:Ignorable="d"
-        Title="PIM - Meteor Tragectory Calculation Integration Program" Height="450" Width="800">
+        Title="PIM - Meteor Tragectory Calculation Integration Program" Height="450" Width="800" UseLayoutRounding="True" SnapsToDevicePixels="True">
     <Grid>
-        <StackPanel Background="Black" HorizontalAlignment="Left" Width="200"/>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="0">
-            <Label.Content>
-                <Grid Width="200">
-                    <Label Content="" Margin="0,0,147.5,0"/>
-                    <Label Content="Home" Foreground="#FFD3E556" Margin="127,0,0,0"/>
+        <StackPanel Background="#FF405089" HorizontalAlignment="Left" Width="200" Margin="0,0,0,243">
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
+                <Label.Content>
+                    <Grid Width="190">
+                        <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/internet.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                        <Label Content="Home" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+                    </Grid>
+                </Label.Content>
+            </Label>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
+                <Grid Width="190">
+                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/commerce-and-shopping.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label Content="Calculator" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
                 </Grid>
-            </Label.Content>
-        </Label>
+            </Label>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
+                <Grid Width="190">
+                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/server.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label Content="Data Base" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+                </Grid>
+            </Label>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
+                <Grid Width="190">
+                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/question.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label Content="Help" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+                </Grid>
+            </Label>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Width="200" Margin="0,176,0,0" Source="_Data/_Media/_Img/splash-screen-pim.png"/>
     </Grid>
 </Window>
