@@ -30,7 +30,7 @@ namespace WindowsClient
         {
             Default frm = new Default();
             frm.Show();
-            this.Close();
+           // this.Close();
         }
     }
 }

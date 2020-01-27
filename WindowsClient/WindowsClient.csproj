@@ -112,9 +112,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="_Data\_Connections\" />
-    <Folder Include="_Data\_Objects\" />
+    <Resource Include="_Data\_Media\_Img\splash-screen-pim.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
