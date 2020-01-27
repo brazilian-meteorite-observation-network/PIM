@@ -115,5 +115,11 @@
   <ItemGroup>
     <Resource Include="_Data\_Media\_Img\splash-screen-pim.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Data\_Media\_Img\commerce-and-shopping.png" />
+    <Resource Include="_Data\_Media\_Img\internet.png" />
+    <Resource Include="_Data\_Media\_Img\question.png" />
+    <Resource Include="_Data\_Media\_Img\server.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
