@@ -112,7 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="_Data\_Media\_Img\splash-screen-pim.png" />
   </ItemGroup>
