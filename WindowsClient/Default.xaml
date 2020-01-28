@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
         mc:Ignorable="d"
-        Title="PIM - Meteor Tragectory Calculation Integration Program" Height="450" Width="800" UseLayoutRounding="True" SnapsToDevicePixels="True">
+        Title="PIM - Meteor Tragectory Calculation Integration Program" Height="450" Width="800" UseLayoutRounding="True" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Background="#FF405089" HorizontalAlignment="Left" Width="200" Margin="0,0,0,243">
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
@@ -38,6 +38,31 @@
         <Grid HorizontalAlignment="Left" Margin="0,176,0,0" Width="200">
             <Image Height="132" Margin="34,0,39,87" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
             <Image Margin="34,0,39,29" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="39" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Margin="200,0,0,0" Background="#FFD9DBF0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image VerticalAlignment="Top" Source="_Data/_Media/_Img/PIM-one.png" Height="96" Margin="199,0,201,0" Grid.ColumnSpan="2"/>
+            <Label Content="Position 1" Margin="25,79,25,0" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" FontSize="20" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Position 2" Margin="25,79,25,0" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" FontSize="20" Height="34" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Margin="25,130.333,25,0" TextWrapping="Wrap" Text="Latitude Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
+            <TextBox Margin="25,193.333,25,0" TextWrapping="Wrap" Text="Longitude Input&#x9;" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
+            <TextBox Margin="25,258.333,25,0" TextWrapping="Wrap" Text="Height Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
+            <TextBox Margin="25,130.639,25,0" TextWrapping="Wrap" Text="Latitude Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
+            <TextBox Margin="25,193.333,25,0" TextWrapping="Wrap" Text="Longitude Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
+            <TextBox Margin="25,258.027,25,0" TextWrapping="Wrap" Text="Height Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
+            <Separator Height="23" Margin="25,302,25,0" VerticalAlignment="Top" Background="#FF7E55F3" Grid.ColumnSpan="2"/>
+            <TextBox Margin="25,330.639,25,0" TextWrapping="Wrap" Text="Time Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
+            <ComboBox Grid.Column="1" Margin="25,330,25,0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5" Height="39" IsReadOnly="True">
+                <ComboBoxItem Content="Selection"/>
+                <ComboBoxItem Content="Item 1"/>
+                <ComboBoxItem Content="Item 2"/>
+            </ComboBox>
+            <Border Margin="-52.5,382,0,0" Grid.ColumnSpan="2" Grid.Column="1" Padding="0" Background="#FF405089" CornerRadius="5" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104">
+                <Label Content="Calculate" Foreground="#B2FFFFFF" FontFamily="Verdana" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Border>
         </Grid>
     </Grid>
 </Window>
