@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="337.5" Width="600" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Initialized="Window_Initialized" Background="{x:Null}" AllowsTransparency="True">
+        Title="MainWindow" Height="337.5" Width="600" WindowStartupLocation="CenterScreen" WindowState="Normal" WindowStyle="None" ResizeMode="NoResize" Background="{x:Null}" AllowsTransparency="True">
     <Border CornerRadius="25">
         <Border.Background>
             <ImageBrush ImageSource="_Data/_Media/_Img/splash-screen-pim.png"/>
