@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.ComponentModel;
 using System.Threading;
+using System.ComponentModel;
 using WindowsClient._Data._Actions;
 
 namespace WindowsClient
@@ -27,25 +27,18 @@ namespace WindowsClient
         {
             InitializeComponent();
 
-            worker.DoWork += Worker_DoWork;
-            worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
+            BackgroundWorkers.SetBackgroundWorker
+            (
+                (object sender, DoWorkEventArgs e) => { Thread.Sleep(5000); }, // Freezes the main thread for 5 seconds.
+                (object sender, RunWorkerCompletedEventArgs e) =>
+                {
+                    Default frmDefault = new Default();
 
-            worker.RunWorkerAsync();
-        }
+                    frmDefault.Show();
 
-        private readonly BackgroundWorker worker = new BackgroundWorker();
-
-        private void Worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            Thread.Sleep(5000);
-        }
-
-        private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            Default frm = new Default();
-            frm.Show();
-
-            this.Close();
+                    this.Close();
+                } // Opens the Default form after 5 seconds.
+            );
         }
     }
 }
