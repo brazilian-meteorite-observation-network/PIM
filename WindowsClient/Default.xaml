@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WindowsClient"
         mc:Ignorable="d"
         Title="PIM - Meteor Tragectory Calculation Integration Program" Height="450" Width="800" UseLayoutRounding="True" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="#FFD9DBF0">
         <StackPanel Background="#FF405089" HorizontalAlignment="Left" Width="200" Margin="0,0,0,243">
-            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
+            <Label x:Name="HomeBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5">
                 <Label.Content>
                     <Grid Width="190">
                         <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/internet.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
@@ -35,11 +35,24 @@
                 </Grid>
             </Label>
         </StackPanel>
-        <Grid HorizontalAlignment="Left" Margin="0,176,0,0" Width="200">
+        <Grid HorizontalAlignment="Left" Width="200" Background="White" Height="243" VerticalAlignment="Bottom">
             <Image Height="132" Margin="34,0,39,87" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
             <Image Margin="34,0,39,29" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="39" VerticalAlignment="Bottom"/>
         </Grid>
-        <Grid Margin="200,0,0,0" Background="#FFD9DBF0">
+        <Grid x:Name="HomeForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0">
+            <Label Content="HOME" Margin="196,177,180,136.233" FontSize="72" RenderTransformOrigin="0.5,0.5" Foreground="#7F000000" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-35.784"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Grid>
+        <Grid x:Name="CalculatorForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0">
+         
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -63,6 +76,12 @@
             <Border Margin="-52.5,382,0,0" Grid.ColumnSpan="2" Grid.Column="1" Padding="0" Background="#FF405089" CornerRadius="5" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104">
                 <Label Content="Calculate" Foreground="#B2FFFFFF" FontFamily="Verdana" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Border>
+        </Grid>
+        <Grid x:Name="DataForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0">
+
+        </Grid>
+        <Grid x:Name="HelpForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0">
+
         </Grid>
     </Grid>
 </Window>

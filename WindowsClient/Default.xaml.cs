@@ -22,6 +22,23 @@ namespace WindowsClient
         public Default()
         {
             InitializeComponent();
+            DefaultConfig();
+        }
+
+        private void DefaultConfig()
+        {
+            HomeForm.Visibility = Visibility.Visible;
+            CalculatorForm.Visibility = Visibility.Collapsed;
+            DataForm.Visibility = Visibility.Collapsed;
+            HelpForm.Visibility = Visibility.Collapsed;
+        }
+
+        private void OpenHome()
+        {
+            /*while (HomeBtn.MouseUp==true)
+            {
+                MessageBox.Show("ok");
+            }*/
         }
     }
 }
