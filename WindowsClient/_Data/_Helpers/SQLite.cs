@@ -54,7 +54,7 @@ namespace WindowsClient._Data._Helpers
         {
             try
             {
-                SQLiteDataAdapter da = null;
+                SQLiteDataAdapter da;
                 DataTable dt = new DataTable();
 
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
@@ -77,12 +77,12 @@ namespace WindowsClient._Data._Helpers
         {
             try
             {
+                SQLiteDataAdapter da;
                 DataTable dt = new DataTable();
-                SQLiteDataAdapter da = null;
 
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Objects Where id=" + Id;
+                    cmd.CommandText = $"SELECT * FROM Objects Where id={Id}";
 
                     da = new SQLiteDataAdapter(cmd.CommandText, DBConnection());
                     da.Fill(dt);
@@ -122,7 +122,7 @@ namespace WindowsClient._Data._Helpers
         {
             try
             {
-                using (var cmd = new SQLiteCommand(DBConnection()))
+                using (SQLiteCommand cmd = new SQLiteCommand(DBConnection()))
                 {
                     if (obj.Id > 0)
                     {
@@ -148,7 +148,7 @@ namespace WindowsClient._Data._Helpers
         {
             try
             {
-                using (var cmd = new SQLiteCommand(DBConnection()))
+                using (SQLiteCommand cmd = new SQLiteCommand(DBConnection()))
                 {
                     cmd.CommandText = "DELETE FROM Objects Where id=@id";
                     cmd.Parameters.AddWithValue("@id", Id);
