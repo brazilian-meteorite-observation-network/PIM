@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.ComponentModel;
+using WindowsClient._Data._Helpers;
 
 namespace WindowsClient
 {
@@ -25,6 +26,9 @@ namespace WindowsClient
         public MainWindow()
         {
             InitializeComponent();
+
+            SQLite.CreateSQLiteDB();
+            SQLite.CreateSQLiteTable();
 
             SetBackgroundWorker
             (
