@@ -14,7 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.ComponentModel;
+using WindowsClient._Data;
 using WindowsClient._Data._Helpers;
+using System.Data;
 
 namespace WindowsClient
 {

@@ -18,9 +18,9 @@ namespace WindowsClient
     /// <summary>
     /// Interaction logic for TragectoryCalculator.xaml
     /// </summary>
-    public partial class TragectoryCalculator : UserControl
+    public partial class TrajectoryCalculator : UserControl
     {
-        public TragectoryCalculator()
+        public TrajectoryCalculator()
         {
             InitializeComponent();
         }

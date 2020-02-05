@@ -85,7 +85,7 @@
     <Compile Include="TrajectoryCalculator.xaml.cs">
       <DependentUpon>TrajectoryCalculator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_Data\Object.cs" />
+    <Compile Include="_Data\Trajectory.cs" />
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
     <Compile Include="_Data\_Helpers\SQLite.cs" />
     <Page Include="Default.xaml">

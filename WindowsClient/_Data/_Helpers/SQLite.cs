@@ -40,7 +40,8 @@ namespace WindowsClient._Data._Helpers
             {
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
                 {
-                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Objects (id INT PRIMARY KEY, variable VARCHAR(50), longitude FLOAT, latitude FLOAT, height FLOAT)";
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS Trajectories (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(255) NOT NULL, status BOOLEAN NOT NULL CHECK (status IN (0, 1)), last_visit DATETIME NOT NULL, STATION VARCHAR(255), DIRECTORY TEXT)";
+
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -59,7 +60,7 @@ namespace WindowsClient._Data._Helpers
 
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM Objects";
+                    cmd.CommandText = "SELECT * FROM Trajectories";
 
                     da = new SQLiteDataAdapter(cmd.CommandText, DBConnection());
                     da.Fill(dt);
@@ -82,7 +83,7 @@ namespace WindowsClient._Data._Helpers
 
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
                 {
-                    cmd.CommandText = $"SELECT * FROM Objects Where id={Id}";
+                    cmd.CommandText = $"SELECT * FROM Trajectories Where id={Id}";
 
                     da = new SQLiteDataAdapter(cmd.CommandText, DBConnection());
                     da.Fill(dt);
@@ -96,18 +97,19 @@ namespace WindowsClient._Data._Helpers
             }
         }
 
-        public static void Insert(Object obj)
+        public static void Insert(Trajectory trajectory)
         {
             try
             {
                 using (SQLiteCommand cmd = DBConnection().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO Objects (id, variable, longitude, latitude, height) values (@id, @variable, @longitude, @latitude, @height)";
+                    cmd.CommandText = "INSERT INTO Trajectories (id, name, status, last_visit, station, directory) VALUES (NULL, @name, @status, @last_visit, @station, @directory)";
 
-                    cmd.Parameters.AddWithValue("@variable", obj.Variable);
-                    cmd.Parameters.AddWithValue("@longitude", obj.Longitude);
-                    cmd.Parameters.AddWithValue("@latitude", obj.Latitude);
-                    cmd.Parameters.AddWithValue("@height", obj.Height);
+                    cmd.Parameters.AddWithValue("@name", trajectory.Name);
+                    cmd.Parameters.AddWithValue("@status", trajectory.Status);
+                    cmd.Parameters.AddWithValue("@last_visit", trajectory.Last_Visit);
+                    cmd.Parameters.AddWithValue("@station", trajectory.Station);
+                    cmd.Parameters.AddWithValue("@directory", trajectory.Directory);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -118,21 +120,22 @@ namespace WindowsClient._Data._Helpers
             }
         }
 
-        public static void Update(Object obj)
+        public static void Update(Trajectory trajectory)
         {
             try
             {
                 using (SQLiteCommand cmd = new SQLiteCommand(DBConnection()))
                 {
-                    if (obj.Id > 0)
+                    if (trajectory.Id > 0)
                     {
-                        cmd.CommandText = "UPDATE Objects SET variable=@variable, longitude=@longitude, latitude=@latitude, height=@heght WHERE id=@id";
+                        cmd.CommandText = "UPDATE Trajectories SET name=@name, status=@status, last_visit=@last_visit, station=@station, directory=@directory WHERE id=@id";
 
-                        cmd.Parameters.AddWithValue("@id", obj.Id);
-                        cmd.Parameters.AddWithValue("@variable", obj.Variable);
-                        cmd.Parameters.AddWithValue("@longitude", obj.Longitude);
-                        cmd.Parameters.AddWithValue("@latitude", obj.Latitude);
-                        cmd.Parameters.AddWithValue("@height", obj.Height);
+                        cmd.Parameters.AddWithValue("@id", trajectory.Id);
+                        cmd.Parameters.AddWithValue("@name", trajectory.Name);
+                        cmd.Parameters.AddWithValue("@status", trajectory.Status);
+                        cmd.Parameters.AddWithValue("@last_visit", trajectory.Last_Visit);
+                        cmd.Parameters.AddWithValue("@station", trajectory.Station);
+                        cmd.Parameters.AddWithValue("@directory", trajectory.Directory);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -150,8 +153,9 @@ namespace WindowsClient._Data._Helpers
             {
                 using (SQLiteCommand cmd = new SQLiteCommand(DBConnection()))
                 {
-                    cmd.CommandText = "DELETE FROM Objects Where id=@id";
+                    cmd.CommandText = "DELETE FROM Trajectories Where id=@id";
                     cmd.Parameters.AddWithValue("@id", Id);
+
                     cmd.ExecuteNonQuery();
                 }
             }
