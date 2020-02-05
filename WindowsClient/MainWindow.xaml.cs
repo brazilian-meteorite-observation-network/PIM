@@ -28,10 +28,9 @@ namespace WindowsClient
         public MainWindow()
         {
             InitializeComponent();
-
             SQLite.CreateSQLiteDB();
             SQLite.CreateSQLiteTable();
-
+            
             SetBackgroundWorker
             (
                 (object sender, DoWorkEventArgs e) => { Thread.Sleep(5000); }, // Freezes the main thread for 5 seconds.
