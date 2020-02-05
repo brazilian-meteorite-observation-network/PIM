@@ -26,6 +26,7 @@ namespace WindowsClient
         {
             InitializeComponent();
 
+            
             SetBackgroundWorker
             (
                 (object sender, DoWorkEventArgs e) => { Thread.Sleep(5000); }, // Freezes the main thread for 5 seconds.
