@@ -33,7 +33,7 @@ namespace WindowsClient
             
             SetBackgroundWorker
             (
-                (object sender, DoWorkEventArgs e) => { Thread.Sleep(5000); }, // Freezes the main thread for 5 seconds.
+                (object sender, DoWorkEventArgs e) => { Thread.Sleep(4000); }, // Freezes the main thread for 5 seconds.
                 (object sender, RunWorkerCompletedEventArgs e) =>
                 {
                     Default frmDefault = new Default();
