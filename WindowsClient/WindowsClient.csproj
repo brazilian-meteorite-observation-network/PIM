@@ -86,7 +86,9 @@
       <DependentUpon>TrajectoryCalculator.xaml</DependentUpon>
     </Compile>
     <Compile Include="_Data\Trajectory.cs" />
+    <Compile Include="_Data\_Actions\FortranChecker.cs" />
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
+    <Compile Include="_Data\_Helpers\CurrentDirectory.cs" />
     <Compile Include="_Data\_Helpers\SQLite.cs" />
     <Page Include="Default.xaml">
       <SubType>Designer</SubType>

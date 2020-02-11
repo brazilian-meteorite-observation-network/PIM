@@ -11,10 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Threading;
+using System.IO;
 using System.ComponentModel;
 using WindowsClient._Data;
+using WindowsClient._Data._Actions;
 using WindowsClient._Data._Helpers;
 using System.Data;
 
@@ -30,10 +31,15 @@ namespace WindowsClient
             InitializeComponent();
             SQLite.CreateSQLiteDB();
             SQLite.CreateSQLiteTable();
-            
+
+            Fortran.Execute(CurrentDirectory.PATH);
+
             SetBackgroundWorker
             (
-                (object sender, DoWorkEventArgs e) => { Thread.Sleep(5000); }, // Freezes the main thread for 5 seconds.
+                (object sender, DoWorkEventArgs e) =>
+                {
+                    while (!Fortran.Exists(Path.Combine(CurrentDirectory.PATH, "gfortran-windows.exe"))) { }
+                }, // Freezes the main thread for 5 seconds.
                 (object sender, RunWorkerCompletedEventArgs e) =>
                 {
                     Default frmDefault = new Default();

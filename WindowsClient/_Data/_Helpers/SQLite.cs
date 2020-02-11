@@ -8,12 +8,11 @@ namespace WindowsClient._Data._Helpers
     public static class SQLite
     {
         private static SQLiteConnection sqliteConnection;
-        private static readonly string currentDir = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.ToString());
 
         private static SQLiteConnection DBConnection()
         {
 
-            sqliteConnection = new SQLiteConnection($@"Data Source={currentDir}\db.sqlite; Version=3;");
+            sqliteConnection = new SQLiteConnection($@"Data Source={CurrentDirectory.PATH}\db.sqlite; Version=3;");
             sqliteConnection.Open();
 
             return sqliteConnection;
@@ -23,9 +22,9 @@ namespace WindowsClient._Data._Helpers
         {
             try
             {
-                if (!File.Exists($@"{currentDir}\db.sqlite"))
+                if (!File.Exists($@"{CurrentDirectory.PATH}\db.sqlite"))
                 {
-                    SQLiteConnection.CreateFile($@"{currentDir}\db.sqlite");
+                    SQLiteConnection.CreateFile($@"{CurrentDirectory.PATH}\db.sqlite");
                 }
             }
             catch
