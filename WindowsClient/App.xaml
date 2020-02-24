@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WindowsClient"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Reference to fonts, <FontFamily x:Key="(internal name in font file, not file name)">directory in project#(internal font name again)</FontFamily> -->
+        <FontFamily x:Key="Font Awesome 5 Free Regular">_Fonts/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Regular</FontFamily>
+        <FontFamily x:Key="Font Awesome 5 Free Solid">_Fonts/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Solid</FontFamily>
     </Application.Resources>
 </Application>
