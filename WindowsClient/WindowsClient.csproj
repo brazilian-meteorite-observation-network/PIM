@@ -86,8 +86,13 @@
       <DependentUpon>TrajectoryCalculator.xaml</DependentUpon>
     </Compile>
     <Compile Include="_Data\Trajectory.cs" />
+    <Compile Include="_Data\_Actions\DirectoryDialog.cs" />
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
+    <Compile Include="_Data\_Actions\ModelConfig.cs" />
     <Compile Include="_Data\_Helpers\SQLite.cs" />
+    <Compile Include="_Data\_Items\TextBoxPlaceHolder.xaml.cs">
+      <DependentUpon>TextBoxPlaceHolder.xaml</DependentUpon>
+    </Compile>
     <Page Include="Default.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -105,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TrajectoryCalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_Data\_Items\TextBoxPlaceHolder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +142,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

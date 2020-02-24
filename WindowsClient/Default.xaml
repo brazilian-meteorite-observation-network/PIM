@@ -1,43 +1,42 @@
-﻿<Window x:Class="WindowsClient.Default"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsClient"
+        xmlns:_Items="clr-namespace:WindowsClient._Data._Items" x:Class="WindowsClient.Default"
         mc:Ignorable="d"
         Title="PIM - Meteor Tragectory Calculation Integration Program" Height="500" Width="800" UseLayoutRounding="True" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFD9DBF0">
-        <StackPanel x:Name="card" Background="#FF405089" HorizontalAlignment="Left" Width="200" Margin="0,0,0,243">
-            <Label x:Name="HomeBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5" MouseUp="CatchName" MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
-                <Label.Content>
-                    <Grid x:Name="HomeBtnGrid" Width="190">
-                        <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/internet.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
-                        <Label Content="Home" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
-                    </Grid>
-                </Label.Content>
-            </Label>
-            <Label x:Name="CalculatorBtn" VerticalAlignment="Top" Foreground="#FFD3E556" Padding="5"  MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
-                <Grid x:Name="CalculatorBtnGrid" Width="190">
-                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/commerce-and-shopping.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
-                    <Label Content="Calculator" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+        <StackPanel x:Name="card" Background="#FF405089" HorizontalAlignment="Left" Width="179" Margin="0,0,0,243">
+            <Label x:Name="HomeBtn" VerticalAlignment="Top" Foreground="#FFD3E556" Padding="5" MouseUp="CatchName" MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
+                <Grid x:Name="HomeBtnGrid" Width="169">
+                    <Image Margin="16,0,129,0" Source="_Data/_Media/_Img/internet.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label x:Name="label" Content="Home" Foreground="#FFD3E556" Margin="59,0,0,0" FontSize="18"/>
                 </Grid>
             </Label>
-            <Label x:Name="DbBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5" MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
-                <Grid x:Name="DbBtnGrid" Width="190">
-                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/server.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
-                    <Label Content="Data Base" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+            <Label x:Name="CalculatorBtn" VerticalAlignment="Top" Foreground="#FFD3E556" Padding="5"  MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick" Height="{Binding ActualHeight, ElementName=HomeBtn, Mode=OneWay}">
+                <Grid x:Name="CalculatorBtnGrid" Width="{Binding ActualWidth, ElementName=HomeBtnGrid, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=HomeBtnGrid, Mode=OneWay}">
+                    <Image Margin="16,0,129,0" Source="_Data/_Media/_Img/commerce-and-shopping.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label Content="Calculator" Foreground="#FFD3E556" Margin="59,0,0,0" FontSize="18"/>
                 </Grid>
             </Label>
-            <Label x:Name="HelpBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="200" Padding="5"  MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
-                <Grid x:Name="HelpBtnGrid" Width="190">
-                    <Image Margin="24,0,142,0" Source="_Data/_Media/_Img/question.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
-                    <Label x:Name="ss" Content="Help" Foreground="#FFD3E556" Margin="84,0,0,0" FontSize="18"/>
+            <Label x:Name="DbBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="179" Padding="5" MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
+                <Grid x:Name="DbBtnGrid" Width="169">
+                    <Image Margin="16,0,129,0" Source="_Data/_Media/_Img/server.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label Content="Data Base" Foreground="#FFD3E556" Margin="59,0,0,0" FontSize="18"/>
+                </Grid>
+            </Label>
+            <Label x:Name="HelpBtn" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD3E556" Width="179" Padding="5"  MouseEnter="MainMenuBtns_MouseEnter" MouseLeave="MainMenuBtns_MouseLeave" MouseLeftButtonUp="MainMenuBtns_MouseLeftClick">
+                <Grid x:Name="HelpBtnGrid" Width="169">
+                    <Image Margin="16,0,129,0" Source="_Data/_Media/_Img/question.png" UseLayoutRounding="True" SnapsToDevicePixels="True"/>
+                    <Label x:Name="ss" Content="Help" Foreground="#FFD3E556" Margin="59,0,0,0" FontSize="18"/>
                 </Grid>
             </Label>
         </StackPanel>
-        <Grid HorizontalAlignment="Left" Width="200" Background="White" Height="243" VerticalAlignment="Bottom">
-            <Image Height="132" Margin="34,0,39,87" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
-            <Image Margin="34,0,39,29" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="39" VerticalAlignment="Bottom"/>
+        <Grid HorizontalAlignment="Left" Width="179" Background="White" Height="243" VerticalAlignment="Bottom">
+            <Image Height="132" Margin="26,0,26,81" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
+            <Image Margin="40,0,40,44" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="32" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid x:Name="HomeForm" Margin="200,0,0,0" d:IsHidden="True">
             <Label Content="HOME" Margin="196,177,180,136.233" FontSize="72" RenderTransformOrigin="0.5,0.5" Foreground="#7F000000" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
@@ -51,33 +50,39 @@
                 </Label.RenderTransform>
             </Label>
         </Grid>
-        <ScrollViewer x:Name="CalculatorScroll" Margin="200,0,0,25" VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <Grid x:Name="CalculatorForm" Background="#FFD9DBF0" Height="480" UseLayoutRounding="False" Width="{Binding Width, ElementName=CalculatorScroll}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <ScrollViewer x:Name="CalculatorScroll" Margin="179,0,0,25" VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Grid x:Name="CalculatorForm" Background="#FFD9DBF0" UseLayoutRounding="False" Height="{Binding Height, ElementName=CalculatorScroll}" Width="{Binding Width, ElementName=CalculatorScroll}" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="308*"/>
+                    <ColumnDefinition Width="305*"/>
                 </Grid.ColumnDefinitions>
-                <Image VerticalAlignment="Top" Source="_Data/_Media/_Img/PIM-one.png" Height="96" Margin="199,0,201,0" Grid.ColumnSpan="2"/>
-                <Label Content="Position 1" Margin="25,79,25,0" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" FontSize="20" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <Label Content="Position 2" Margin="25,79,25,0" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" FontSize="20" Height="34" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <TextBox x:Name="txtLatP1" Margin="25,130.333,25,0" TextWrapping="Wrap" Text="-23.186392D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
-                <TextBox x:Name="txtLongP1" Margin="25,193.333,25,0" TextWrapping="Wrap" Text="-44.994061D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
-                <TextBox x:Name="txtHeightP1" Margin="25,258.333,25,0" TextWrapping="Wrap" Text="114.486748D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
-                <TextBox x:Name="txtLatP2" Margin="25,130.639,25,0" TextWrapping="Wrap" Text="-23.23255D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
-                <TextBox x:Name="txtLongP2" Margin="25,193.333,25,0" TextWrapping="Wrap" Text="-45.136848D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
-                <TextBox x:Name="txtHeightP2" Margin="25,258.027,25,0" TextWrapping="Wrap" Text="101.001053D0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Grid.Column="1"/>
-                <Separator Height="23" Margin="24,304,24.5,0" VerticalAlignment="Top" Background="#FF7E55F3" Grid.ColumnSpan="2"/>
-                <TextBox x:Name="txtTimeP2P" Margin="25,332,25,0" TextWrapping="Wrap" Text="Time Input" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0"/>
-                <ComboBox x:Name="CombStatus" Grid.Column="1" Margin="24,332,24.5,0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5" Height="42" IsReadOnly="True">
-                    <ComboBoxItem Content="Selection"/>
-                    <ComboBoxItem Content="Item 1"/>
-                    <ComboBoxItem Content="Item 2"/>
-                </ComboBox>
-                <TextBox x:Name="txtMass" Margin="25,394.904,25,0" TextWrapping="Wrap" Text="3.25d-3" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Height="41"/>
-                <TextBox x:Name="txtCordDirectory" Margin="24,395,144,0" TextWrapping="Wrap" Text="C:\Users\BREWERTONTHIAGOOLIVE\Desktop" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft YaHei Light" Padding="5,5,5,10" BorderBrush="{x:Null}" BorderThickness="0" Height="41" Grid.Column="1"/>
-                <Border Margin="0,395,25,0" Grid.Column="1" Padding="0" Background="#FF405089" CornerRadius="5" Height="41" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114">
+                <Image VerticalAlignment="Top" Source="_Data/_Media/_Img/PIM-one.png" Height="129" Grid.ColumnSpan="2" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Label Content="Initial Observation Point" Margin="30,107,30,0" Height="31" VerticalAlignment="Top" FontFamily="Verdana" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Content="Final Observation Point" Grid.Column="1" Margin="30,107,27,0" Height="31" VerticalAlignment="Top" FontFamily="Verdana" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Border Margin="0,482,25,0" Grid.Column="1" Padding="0" Background="#FF405089" CornerRadius="5" Height="41" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114">
                     <Label x:Name="btnCalcTrag" Content="Calculate" Foreground="#B2FFFFFF" FontFamily="Verdana" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseLeftButtonUp="Label_MouseLeftButtonUp"/>
                 </Border>
+                <_Items:TextBoxPlaceHolder x:Name="ALatitude" Height="42" Margin="30,158,30,0" VerticalAlignment="Top"/>
+                <_Items:TextBoxPlaceHolder x:Name="ALongitude" Height="42" Margin="30,218,30,0" VerticalAlignment="Top"/>
+                <_Items:TextBoxPlaceHolder x:Name="AHeight" Height="42" Margin="30,278,30,0" VerticalAlignment="Top"/>
+                <_Items:TextBoxPlaceHolder x:Name="BLatitude" Height="42" Margin="30,158,27,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <_Items:TextBoxPlaceHolder x:Name="BLongitude" Height="42" Margin="32,218,25,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <_Items:TextBoxPlaceHolder x:Name="BHeight" Height="42" Margin="30,278,27,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Border BorderBrush="#FF7E55F3" BorderThickness="1" Height="1" Margin="30,338,27,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <_Items:TextBoxPlaceHolder x:Name="ABTime" Height="42" Margin="30,357,30,0" VerticalAlignment="Top"/>
+                <_Items:TextBoxPlaceHolder x:Name="ABDensity" Height="42" Margin="30,417,30,0" VerticalAlignment="Top"/>
+                <_Items:TextBoxPlaceHolder x:Name="ABMass" Height="42" Margin="30,357,27,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <ComboBox x:Name="ABMass_Copy" Height="42" Margin="30,417,27,0" VerticalAlignment="Top" Grid.Column="1" BorderBrush="{x:Null}" BorderThickness="0" FontFamily="Verdana" FontSize="20" VerticalContentAlignment="Center" FontStyle="Italic">
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="#FFFBFBFB" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <ComboBoxItem Content="Date 1" FontSize="20" FontFamily="Verdana" IsSelected="True"/>
+                    <ComboBoxItem Content="Date 2" FontSize="20" FontFamily="Verdana" IsSelected="True"/>
+                </ComboBox>
+                <Border BorderBrush="#FF7E55F3" BorderThickness="1" Height="1" Margin="30,477,27,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
             </Grid>
         </ScrollViewer>
         <Grid x:Name="DbForm" Margin="200,0,0,0" Background="#FFD9DBF0" d:IsHidden="True">
@@ -101,6 +106,6 @@
                 </Label.RenderTransform>
             </Label>
         </Grid>
-        <Label VerticalAlignment="Bottom" Content=" © 2020 - Bramon Gdop 1, All Rights Reserved" Padding="2" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="verdana" FontStyle="Italic" FontSize="14" Margin="200,0,0,0" Background="White" BorderBrush="#FFD9DBF0" BorderThickness="1,0,0,0"/>
+        <Label VerticalAlignment="Bottom" Content=" © 2020 - Bramon Gdop 1, All Rights Reserved" Padding="2" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="verdana" FontStyle="Italic" FontSize="14" Margin="179,0,0,0" Background="White" BorderBrush="#FFD9DBF0" BorderThickness="1,0,0,0"/>
     </Grid>
 </Window>

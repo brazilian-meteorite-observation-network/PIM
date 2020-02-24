@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,15 +31,18 @@ namespace WindowsClient
         public Default()
         {
             InitializeComponent();
+
+            // apliyng softwate default behavior
             MenuDefaultState();
 
             // Preloading Controls Elements
-            na.Margin = new Thickness(0, 0, 186, 0);
+            na.Margin = new Thickness(0, 0, 165, 0);
             na.Background = (Brush)bc.ConvertFrom("#FFD3E556");
         }
 
         private void MenuDefaultState()
         {
+            // MainMenu buttons events
             HomeForm.Visibility = Visibility.Hidden;
             HomeForm.IsEnabled = false;
 
@@ -50,6 +54,19 @@ namespace WindowsClient
 
             HelpForm.Visibility = Visibility.Hidden;
             HelpForm.IsEnabled = false;
+
+            // CalculateForm Configs
+            ALatitude.InsertValues("Initial latitude", "Initial Frame Latitude Coordinates", "Ex: -22.801866");
+            ALongitude.InsertValues("Initial longitude", "Initial Frame Longitude Coordinates", "Ex: -45.190323");
+            AHeight.InsertValues("Initial height in meters", "Initial Frame Height", "in meters above mean sea level, Ex: 566.");
+
+            BLatitude.InsertValues("Final latitude", "Final Frame Latitude Coordinates", "Ex: -7.148470");
+            BLongitude.InsertValues("Final longitude", "Final Frame Longitude Coordinates", "Ex: -34.798074");
+            BHeight.InsertValues("Final height in meters", "Final Frame Height", "in meters above mean sea level, Ex: 20.");
+
+            ABTime.InsertValues("0.56", "Time interval between frames", "in seconds, Ex: 0.56");
+            ABDensity.InsertValues("Meteorite Density", "Meteorite Density", "in miligrams per cm³, Ex: 3.25", 3.25);
+            ABMass.InsertValues("Meteorite Mass", "Meteority Mass", "in kilos, Ex: 1");
         }
 
         private void CatchName(object sender, MouseEventArgs e)
@@ -72,11 +89,11 @@ namespace WindowsClient
         {
             CatchName(sender, e);
             var bc = new BrushConverter();
-            if(menuselectedtab == "HomeBtn")
+            if (menuselectedtab == "HomeBtn")
             {
                 HomeBtn.Background = (Brush)bc.ConvertFrom("#19FFFFFF");
             }
-            else if(menuselectedtab == "CalculatorBtn")
+            else if (menuselectedtab == "CalculatorBtn")
             {
                 CalculatorBtn.Background = (Brush)bc.ConvertFrom("#19FFFFFF");
             }
@@ -152,31 +169,13 @@ namespace WindowsClient
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            string folder = txtCordDirectory.Text;
-            // Filename  
-            string fileName = "Coordinates.for";
-            // Fullpath. You can direct hardcode it if you like.  
-            string fullPath = folder + "/" + fileName;
-            // An array of strings  
-            string[] coordinates = { txtLatP1.Text, txtLongP1.Text, txtHeightP1.Text, txtLatP2.Text, txtLongP2.Text, txtHeightP2.Text, txtTimeP2P.Text, txtMass.Text };
-            using (StreamWriter writer = new StreamWriter(fullPath))
-            {
-                writer.WriteLine("T = 0.56d0");
-                writer.WriteLine("");
-                writer.WriteLine("");
-                writer.WriteLine("");
-                writer.WriteLine("");
-                writer.WriteLine("H1 = " + coordinates[3]);
-                writer.WriteLine("LON1 = " + coordinates[2]);
-                writer.WriteLine("LAT1 = " + coordinates[1]);
-                writer.WriteLine("");
-                writer.WriteLine("H2 = " + coordinates[6]);
-                writer.WriteLine("LON2 = " + coordinates[5]);
-                writer.WriteLine("LAT2 = " + coordinates[4]);
-            }
-            // Read a file  
-            string readText = File.ReadAllText(fullPath);
-            MessageBox.Show(readText);
+            _Data._Actions.ModelConfig.InsertAllInputs(1, 2, 3);
+        }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            string ss = _Data._Actions.DirectoryDialog.Paths();
+            MessageBox.Show(ss);
         }
     }
 }
