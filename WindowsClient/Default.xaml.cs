@@ -30,6 +30,7 @@ namespace WindowsClient
 
         public Default()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjE2Nzk0QDMxMzcyZTM0MmUzMG9Vc3J3b3lvZkVTMnc1UXgxdHJlT3hxUFhmdGw4ZUVLVTR5eEFuUVJFL289;MjE2Nzk1QDMxMzcyZTM0MmUzMEpJMWZ5cVU2RVpaWHpDSGhjSUxyRUl3cnZKNWh3Zm1GaSs2SlFBMlgvN3c9;MjE2Nzk2QDMxMzcyZTM0MmUzMFNYa2NHU2ZqUXNZQmNMWDU5bkZxcElLaXM0NDNvOWdocnl3bjJ1ZkdHNms9;MjE2Nzk3QDMxMzcyZTM0MmUzMFJBZ1Exa29SdUpIOFE4VmZ6cnlzemhVcWcxblZHSjdoVktiQlRUU0ZmNzg9;MjE2Nzk4QDMxMzcyZTM0MmUzMGMyT1BhVkttVXZMR1gzMDRJYXZkSFVmQk5ET0NhN3I5bGtnSTYwWllFTFk9;MjE2Nzk5QDMxMzcyZTM0MmUzMGJFdTdkbmhVdW1qZ2NVWGNpcU1Vb2JTNXo1TW8rbFVBcU9nWHJFeStwTFE9");
             InitializeComponent();
 
             // apliyng softwate default behavior
@@ -54,19 +55,6 @@ namespace WindowsClient
 
             HelpForm.Visibility = Visibility.Hidden;
             HelpForm.IsEnabled = false;
-
-            // CalculateForm Configs
-            ALatitude.InsertValues("Initial latitude", "Initial Frame Latitude Coordinates", "Ex: -22.801866");
-            ALongitude.InsertValues("Initial longitude", "Initial Frame Longitude Coordinates", "Ex: -45.190323");
-            AHeight.InsertValues("Initial height in meters", "Initial Frame Height", "in meters above mean sea level, Ex: 566.");
-
-            BLatitude.InsertValues("Final latitude", "Final Frame Latitude Coordinates", "Ex: -7.148470");
-            BLongitude.InsertValues("Final longitude", "Final Frame Longitude Coordinates", "Ex: -34.798074");
-            BHeight.InsertValues("Final height in meters", "Final Frame Height", "in meters above mean sea level, Ex: 20.");
-
-            ABTime.InsertValues("0.56", "Time interval between frames", "in seconds, Ex: 0.56");
-            ABDensity.InsertValues("Meteorite Density", "Meteorite Density", "in miligrams per cm³, Ex: 3.25", 3.25);
-            ABMass.InsertValues("Meteorite Mass", "Meteority Mass", "in kilos, Ex: 1");
         }
 
         private void CatchName(object sender, MouseEventArgs e)
@@ -148,7 +136,6 @@ namespace WindowsClient
                 CalculatorForm.Visibility = Visibility.Visible;
                 CalculatorBtnGrid.Children.Add(na);
                 CalculatorForm.IsEnabled = true;
-
             }
 
             else if (menuselectedtab == "DbBtn")
@@ -167,10 +154,10 @@ namespace WindowsClient
 
         }
 
-        private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        /*private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             _Data._Actions.ModelConfig.InsertAllInputs(1, 2, 3);
-        }
+        }*/
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

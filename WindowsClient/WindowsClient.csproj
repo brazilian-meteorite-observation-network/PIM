@@ -49,6 +49,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=17.4450.0.51, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.17.4.0.51\lib\net45\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.RichTextBoxAdv.WPF, Version=17.4450.0.51, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.RichTextBoxAdv.WPF.Classic.17.4.0.51\lib\net45\Syncfusion.RichTextBoxAdv.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfMaps.WPF, Version=17.4450.0.51, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SfMaps.WPF.17.4.0.51\lib\net45\Syncfusion.SfMaps.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=17.4450.0.51, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.WPF.17.4.0.51\lib\net45\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -82,18 +94,30 @@
     <Compile Include="Default.xaml.cs">
       <DependentUpon>Default.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FileViewer.xaml.cs">
+      <DependentUpon>FileViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TrajectoryCalculator.xaml.cs">
       <DependentUpon>TrajectoryCalculator.xaml</DependentUpon>
     </Compile>
     <Compile Include="_Data\Trajectory.cs" />
+    <Compile Include="_Data\_Actions\Actions.cs" />
     <Compile Include="_Data\_Actions\DirectoryDialog.cs" />
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
     <Compile Include="_Data\_Actions\ModelConfig.cs" />
+    <Compile Include="_Data\_Actions\PromptEvents.cs" />
     <Compile Include="_Data\_Helpers\SQLite.cs" />
+    <Compile Include="_Data\_Items\CalculatorForm.xaml.cs">
+      <DependentUpon>CalculatorForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="_Data\_Items\TextBoxPlaceHolder.xaml.cs">
       <DependentUpon>TextBoxPlaceHolder.xaml</DependentUpon>
     </Compile>
     <Page Include="Default.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +134,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TrajectoryCalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_Data\_Items\CalculatorForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +170,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="_Data\_Maps\_World\World_Cities.dbf" />
+    <None Include="_Data\_Maps\_World\World_Cities.prj" />
+    <None Include="_Data\_Maps\_World\World_Cities.sbn" />
+    <None Include="_Data\_Maps\_World\World_Cities.sbx" />
+    <None Include="_Data\_Maps\_World\World_Cities.shp" />
+    <None Include="_Data\_Maps\_World\World_Cities.shx" />
     <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Regular-400.otf" />
     <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
@@ -163,6 +197,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="_Data\_Media\_Img\PIM-one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Data\_Media\_Img\world.map.plot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="_Data\_Maps\_World\World_Cities.shp.xml" />
+    <Resource Include="_Data\_Maps\_World\World_Cities_README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SampleData\SampleDataSource\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
