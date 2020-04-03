@@ -40,15 +40,17 @@ Na tela de cálculo (imagem 2) é necessário imputar as coordenadas corretas de
 
 - Tela de Cálculo
 
-![SplashScreen](images/calculatorform.png)
+![CalculatorForm](images/calculatorform.png)
 
 ## Casos de Uso
 
 - Case 1:
 
-No ano XXXX houve a queda de meteorito na Costa Rica houveram muitas buscas com poucos resultados, com a utilização dos scripts foi possível facilitar essa busca, através de cálculos foi possível traçar uma melhor localização da queda facilitando o trabalho dos pesquisadores e comunidade cientifica que utilizavam as informações da BRAMON.
+Em abril de 2019 houve a queda de meteorito na Costa Rica houveram muitas buscas com poucos resultados, com a utilização dos scripts foi possível facilitar essa busca, através de cálculos foi possível traçar uma melhor localização da queda facilitando o trabalho dos pesquisadores e comunidade cientifica que utilizavam as informações da BRAMON.
 
 Tabela 1 – Pontos Obtidos na Trajetória do Meteoro (Costa Rica)
+
+![table](images/table.png)
 
 ## Referências
 
