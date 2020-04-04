@@ -40,7 +40,7 @@ Na tela de cálculo (imagem 2) é necessário imputar as coordenadas corretas de
 
 - Tela de Cálculo
 
-![CalculatorForm](images/calculatorform.png)
+![CalculatorForm](./images/calculatorform.png)
 
 ## Casos de Uso
 
@@ -61,3 +61,20 @@ MURRAY, C.D., Dermott, S.F. Solar System Dynamics. Cambrige University Press. 19
 ## Agradecimentos
 
 FAPESP, Capes e CNPq pelo apoio financeiro a este trabalho.
+
+<table>
+    <tr>
+        <td style="text-align:center">
+            <a href="https://github.com/lucasgdb" target="blank" rel="noopener"><img src="https://avatars3.githubusercontent.com/u/13838273?s=115&u=ebbd853c5f90c7be064e2ee643df722676e5d13e&v=4"><br><sub>@lucasgdb</sub></a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://github.com/BrewertonSantos" target="blank" rel="noopener"><img src="https://avatars2.githubusercontent.com/u/55927647?s=115&u=fdd724c245678796918063eb59d9e60be52f6e54&v=4"><br><sub>@BrewertonSantos</sub></a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://github.com/bcbcfisica" target="blank" rel="noopener"><img src="https://avatars3.githubusercontent.com/u/37511913?s=115&u=769522f8379a331b49da0d27733c9787d1ed03da&v=4"><br><sub>@bcbcfisica</sub></a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://github.com/krolgon" target="blank" rel="noopener"><img src="https://avatars3.githubusercontent.com/u/33358586?s=115&u=765b1e39e6e0e8bef9acd4a9821ebdad9d803536&v=4"><br><sub>@krolgon</sub></a>
+        </td>
+    </tr>
+</table>
