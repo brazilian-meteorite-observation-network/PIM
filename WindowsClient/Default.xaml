@@ -52,52 +52,7 @@
                 </Label.RenderTransform>
             </Label>
         </Grid>
-        <ScrollViewer x:Name="CalculatorScroll" Margin="179,0,0,25" VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <Grid x:Name="CalculatorForm" Background="#FFD9DBF0" UseLayoutRounding="False" Height="{Binding Height, ElementName=CalculatorScroll}" Width="{Binding Width, ElementName=CalculatorScroll}" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="308*"/>
-                    <ColumnDefinition Width="305*"/>
-                </Grid.ColumnDefinitions>
-                <Image VerticalAlignment="Top" Source="_Data/_Media/_Img/PIM-one.png" Height="129" Grid.ColumnSpan="2" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
-                <Label Content="Initial Observation Point" Margin="30,107,30,0" Height="31" VerticalAlignment="Top" FontFamily="Verdana" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Label Content="Final Observation Point" Grid.Column="1" Margin="30,107,27,0" Height="31" VerticalAlignment="Top" FontFamily="Verdana" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <_Items:TextBoxPlaceHolder x:Name="ALatitude" Height="42" Margin="30,158,30,0" VerticalAlignment="Top"/>
-                <_Items:TextBoxPlaceHolder x:Name="ALongitude" Height="42" Margin="30,218,30,0" VerticalAlignment="Top"/>
-                <_Items:TextBoxPlaceHolder x:Name="AHeight" Height="42" Margin="30,278,30,0" VerticalAlignment="Top"/>
-                <_Items:TextBoxPlaceHolder x:Name="BLatitude" Height="42" Margin="30,158,27,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <_Items:TextBoxPlaceHolder x:Name="BLongitude" Height="42" Margin="32,218,25,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <_Items:TextBoxPlaceHolder x:Name="BHeight" Height="42" Margin="30,278,27,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <Border BorderBrush="#FF7E55F3" BorderThickness="1" Height="1" Margin="30,338,27,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                <_Items:TextBoxPlaceHolder x:Name="ABTime" Height="42" Margin="30,357,30,0" VerticalAlignment="Top"/>
-                <_Items:TextBoxPlaceHolder x:Name="ABDensity" Height="42" Margin="30,417,30,0" VerticalAlignment="Top"/>
-                <_Items:TextBoxPlaceHolder x:Name="ABMass" Height="42" Margin="30,357,27,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <ComboBox x:Name="ABMass_Copy" Height="42" Margin="30,417,27,0" VerticalAlignment="Top" Grid.Column="1" BorderBrush="{x:Null}" BorderThickness="0" FontFamily="Verdana" FontSize="20" VerticalContentAlignment="Center" FontStyle="Italic">
-                    <ComboBox.Background>
-                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                            <GradientStop Color="#FFFBFBFB" Offset="1"/>
-                        </LinearGradientBrush>
-                    </ComboBox.Background>
-                    <ComboBoxItem Content="Date 1" FontSize="20" FontFamily="Verdana" IsSelected="True"/>
-                    <ComboBoxItem Content="Date 2" FontSize="20" FontFamily="Verdana" IsSelected="True"/>
-                </ComboBox>
-                <Border BorderBrush="#FF7E55F3" BorderThickness="1" Height="1" Margin="30,477,27,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                <Grid Margin="30,503,30,55">
-                    <syncfusion:SfMap x:Name="maps">
-                        <syncfusion:SfMap.Layers>
-                            <syncfusion:ShapeFileLayer Background="White" Uri="MapPoints.ShapeFiles.states.shp" Height="211">
-                                <syncfusion:ShapeFileLayer.SubShapeFileLayers>
-                                    <syncfusion:SubShapeFileLayer MapPointMargin="20" MapPointIcon="Diamond" Uri="MapPoints.ShapeFiles.landslide.shp">
-                                    </syncfusion:SubShapeFileLayer>
-                                </syncfusion:ShapeFileLayer.SubShapeFileLayers>
-                            </syncfusion:ShapeFileLayer>
-                        </syncfusion:SfMap.Layers>
-                    </syncfusion:SfMap>
-                </Grid>
-                <TextBlock Margin="30,515,93,55" TextWrapping="Wrap" Text="TextBlock" Background="White" Grid.Column="1"/>
-                <Border BorderThickness="1" Height="40" Margin="0,753,93,0" VerticalAlignment="Top" Grid.Column="1" CornerRadius="8" Background="#FF405089" HorizontalAlignment="Right" Width="53"/>
-            </Grid>
-        </ScrollViewer>
+        <_Items:CalculatorForm x:Name="CalculatorForm" Margin="179,0,0,25"/>
         <Grid x:Name="DbForm" Margin="200,0,0,0" Background="#FFD9DBF0" d:IsHidden="True">
             <DataGrid Margin="20" FontFamily="verdana" FontSize="18" AreRowDetailsFrozen="True">
                 <DataGrid.Columns>
@@ -107,7 +62,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Grid x:Name="HelpForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0" d:IsHidden="True">
+        <Grid x:Name="HelpForm" Visibility="Collapsed" Margin="200,0,0,0" Background="#FFD9DBF0">
             <Label Content="HELP" Margin="196,177,180,136.233" FontSize="72" RenderTransformOrigin="0.5,0.5" Foreground="#7F000000" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <Label.RenderTransform>
                     <TransformGroup>
@@ -120,6 +75,5 @@
             </Label>
         </Grid>
         <Label VerticalAlignment="Bottom" Content=" © 2020 - Bramon Gdop 1, All Rights Reserved" Padding="2" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="verdana" FontStyle="Italic" FontSize="14" Margin="179,0,0,0" Background="White" BorderBrush="#FFD9DBF0" BorderThickness="1,0,0,0"/>
-        <_Items:CalculatorForm Margin="179,0,0,25"/>
     </Grid>
 </Window>
