@@ -1,0 +1,231 @@
+
+
+      IMPLICIT NONE
+	CHARACTER FName1*30	
+
+	REAL*8 X(3),VH(3),h(3),e(3),n(3),DV(3)
+	REAL*8 GM, XM, VM, TA, a, eM, PI, hM, i, VE, VG,V0,R0,H0
+	REAL*8 EA, OMEGA, nM, PERI, MA, B, HI, RT, VGEO,G,MT
+	REAL*8 X1,Y1,Z1,X2,Y2,Z2,VEX,VEY,VEZ,AX,CON
+	REAL*8 V0X,V0Y,V0Z,LON0,LAT0
+	
+
+
+		PI=3.1415926535897932384626433832795D0
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+C				INPUT DATA
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+	
+C	X1,X2,Y1,Y2,Z1,Z2: HELIOCENTRIC COORDINATES OF THE LAST TWO POSITIONS OF THE INTEGRATION C(AU)
+
+
+
+        X1 = -8.394917637881339d-01
+	Y1 = -5.536077031584907d-01
+	Z1 =  3.267379862533471d-05
+	X2 =-8.394909001002964d-01
+	Y2 =-5.536082695718851d-01
+	Z2 =3.245650957177380d-05
+ 
+C	V0X,V0Y,V0Z,V0,LON0,LAT0: INITIAL POSITIONS AND VELOCITIES TO CALCULATE THE GEONTRIC VELOCITY
+                                           
+C        H0 =  999.112515678384398d0
+C	H0 = H0*1000.D0
+C	LON0 = 71.7925683406034665d0       
+C	LAT0 = -60.8724278197890953d0 
+
+
+                
+        H0 =   998.759631073071660d0
+	H0 = H0*1000.D0
+	LON0 =  -86.6339163601373485d0 
+	LAT0 =  11.5031355427325153d0
+              
+	                
+	                                
+	                
+	V0X =  2667.93189913547712d0
+	V0Y = 12962.4138334417039d0
+	V0Z = -4312.04146020132703d0 
+
+	 
+C	EARTH GEOCENTER VELOCITIES (AU/day)
+	VEX=9.185210297032970d-03
+	VEY=  -1.442655887880565d-02
+	VEZ= 1.204167106662569d-06
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+C	CON: CONVERSION FROM m/s to AU/day
+
+      CON = (86400.d0)/(1000.d0*149597870.7d0)
+
+C	G: GRAVITATIONAL CONSTANT
+C	MT: EARTH MASS
+C	RT: EARTH RADIUS
+
+	G = 6.67408d-11
+	MT = 5.972d24
+	RT = 6371000.D0
+
+
+
+	R0 = H0+RT
+
+
+C	VE: EARTH ROTATION VELOCITY AT THE STARTING POINT
+	VE = (2.d0*PI*(H0+RT)*dcos(LAT0))/(24.D0*3600.D0)
+
+C	CORRECTION WITH EARTH ROTATION VELOCITY	
+	V0X = V0X -VE*dsin(LON0)
+        V0Y = V0Y +VE*dcos(LON0)
+	V0Z = V0Z
+
+
+	V0 = dsqrt(V0X**2.d0+V0Y**2.d0+V0Z**2.d0)
+
+	write(*,*) V0
+
+C	HELIOCENTRIC VELOCITY CALCULATED WITH CONSERVATION OF ENERGY
+C	GEOCENTRIC VELOCITY -> VELOCITY IN INFINITY WITH NO EARTH ACCELERATION	
+	VGEO = dsqrt(2.d0*((V0**2.d0)/2.d0-G*MT/R0))
+	
+
+C	VEX,VEY,VEZ: VELOCITIES OF THE EARTH GEOCENTER (m/s)
+	VEX = VEX/CON
+	VEY = VEY/CON
+	VEZ = VEZ/CON
+
+C	DV -> DIRECTION OF METEOR VELOCITY
+	AX = dsqrt(((X2-X1)**2.d0)+((Y2-Y1)**2.d0)+((Z2-Z1)**2.d0))	
+	DV(1) = (X2-X1)/AX
+	DV(2) = (Y2-Y1)/AX
+	DV(3) = (Z2-Z1)/AX
+
+	write(*,*) DV,VGEO
+
+C	HELIOCENTRIC VELOCITIES CALCULATED ADDING THE EARTH VELOCITY (m/s)
+	VH(1) = VGEO*DV(1)+VEX
+	VH(2) = VGEO*DV(2)+VEY
+	VH(3) = VGEO*DV(3)+VEZ
+C	VM -> VELOCITY MODULUS
+	VM = dsqrt(VH(1)**2.d0+VH(2)**2.d0+VH(3)**2.d0)
+
+	WRITE(*,*) VM
+
+C	HELIOCENTRIC COORDINATES (m)	
+	X(1) = X1*1000.d0*149597870.7d0
+	X(2) = Y1*1000.d0*149597870.7d0
+	X(3) = Z1*1000.d0*149597870.7d0
+C	POSITION MODULUS
+	XM = dsqrt(X(1)**2+X(2)**2+X(3)**2)
+
+C		Gravitational parameter for the sun
+
+	GM = dble(1.32712440018E20)
+
+C		Orbital momentum vector
+	h(1) = X(2)*VH(3)-X(3)*VH(2)
+	h(2) = X(3)*VH(1)-X(1)*VH(3)	
+	h(3) = X(1)*VH(2)-X(2)*VH(1)
+	hM =  dsqrt((h(1)**2.d0)+(h(2)**2.d0)+(h(3)**2.d0))
+
+C		Eccentricity vector and argument 
+
+	e(1) = ((VH(2)*h(3)-VH(3)*h(2))/GM) - (X(1)/XM)
+	e(2) = ((VH(3)*h(1)-VH(1)*h(3))/GM) - (X(2)/XM)
+	e(3) = ((VH(1)*h(2)-VH(2)*h(1))/GM) - (X(3)/XM)
+	eM = dsqrt((e(1)**2.d0)+(e(2)**2.d0)+(e(3)**2.d0))
+
+	
+
+C	vector n pointing towards ascending node (n=(0,0,1)xh)
+
+	n(1) = -h(2)
+	n(2) = h(1)
+	n(3) = 0.d0
+	nM = dsqrt(n(1)**2.d0+n(2)**2.d0+n(3)**2.d0)
+
+c	true anomaly TA
+
+	B = X(1)*VH(1)+X(2)*VH(2)+X(3)*VH(3)
+
+	IF (B .GE. 0.d0) THEN
+	
+	 TA = dacos((X(1)*e(1)+X(2)*e(2)+X(3)*e(3))/(eM*XM))
+	ELSE
+
+	TA = 2.d0*PI-dacos((X(1)*e(1)+X(2)*e(2)+X(3)*e(3))/(eM*XM))
+	
+	END IF
+
+c	inclination
+
+	i = dacos(h(3)/hM)*180.d0/PI
+
+c	eccentric anomaly
+
+	EA = 2.d0*datan(dtan(TA/2.d0)/dsqrt((1.d0+eM)/(1.d0-eM)))
+
+c	longitude of the ascending node OMEGA
+	
+	IF (n(2) .GE. 0.d0) THEN
+
+	OMEGA = dacos(n(1)/nM)
+
+	ELSE
+	
+	OMEGA = 2.d0*PI - dacos(n(1)/nM)
+	
+	END IF
+	
+	OMEGA = OMEGA*180.d0/PI
+
+C	Argument of periapsis
+
+	IF (e(3) .GE. 0.d0) THEN
+
+	PERI = dacos((e(1)*n(1)+e(2)*n(2)+e(3)*n(3))/(eM*nM))
+
+	ELSE
+	
+	PERI = 2.d0*PI - dacos((e(1)*n(1)+e(2)*n(2)+e(3)*n(3))/(eM*nM))
+	
+	END IF
+	
+	PERI = PERI*180.d0/PI
+
+C	MEAN ANOMALY
+
+	MA = EA - eM*dsin(EA)
+
+C	SEMI-MAJOR AXIS
+
+	a = 1.d0/((2.d0/XM)-((VM**2.d0)/GM))
+	a= a/(1000.d0*149597870.7d0)
+
+	
+	
+	
+
+C	CREATE A FILE WITH ORBITAL PARAMETERS
+
+	FName1='OrbitPar.dat'
+	
+	open (42,file=FName1, status='unknown') 
+
+ 123  FORMAT(6G25.18)
+	
+	write(*,*) a,eM,i,PERI,OMEGA,MA
+	write(42,123) a,eM,i,PERI,OMEGA,MA
+
+	Close(42)
+
+	STOP
+	END
+
+	
+
+	
