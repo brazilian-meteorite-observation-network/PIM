@@ -76,5 +76,11 @@ FAPESP, Capes e CNPq pelo apoio financeiro a este trabalho.
         <td style="text-align:center">
             <a href="https://github.com/krolgon" target="blank" rel="noopener"><img src="https://avatars3.githubusercontent.com/u/33358586?s=115&u=765b1e39e6e0e8bef9acd4a9821ebdad9d803536&v=4"><br><sub>@krolgon</sub></a>
         </td>
+        <td style="text-align:center">
+            <a href="https://github.com/toki-debug" target="blank" rel="noopener"><img src="https://avatars3.githubusercontent.com/u/62253403?s=115&u=f0a752fd8a784a89f0b5e870535402180ce97a83&v=4"><br><sub>@toki-debug</sub></a>
+        </td>
+        <td style="text-align:center">
+            <a href="https://github.com/evalourenco" target="blank" rel="noopener"><img src="https://avatars0.githubusercontent.com/u/37893245?s=115&u=dd68255a62c166739645006193106d2a3f39e64f&v=4"><br><sub>@evalourenco</sub></a>
+        </td>
     </tr>
 </table>
