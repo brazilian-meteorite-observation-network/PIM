@@ -45,7 +45,8 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <syncfusion:UpDown x:Name="PTime" Height="20" Margin="10,4.5,10,0" VerticalAlignment="Top" BorderThickness="0,0,1,0" ZeroColor="Red" MaxValue="10.99" MinValue="0.01" Step="0.01" NullValueText="0.01" NullValue="0.01" AnimationSpeed="0"/>
+                        <syncfusion:UpDown x:Name="PTime" Height="20" Margin="10,4.5,27.75,0" VerticalAlignment="Top" BorderThickness="0,0,1,0" ZeroColor="Red" MaxValue="10.99" MinValue="0.01" Step="0.01" NullValueText="0.01" NullValue="0.01" AnimationSpeed="0"/>
+                        <local:TextBoxPlaceHolder x:Name="IPTime" Height="20" Margin="0,4.5,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="18.75"/>
                         <local:TextBoxPlaceHolder x:Name="PDensity" Margin="10,29.5,10,0" Height="21.447" VerticalAlignment="Top"/>
                         <local:TextBoxPlaceHolder x:Name="TAC" Margin="10,55.947,10,0" Height="21.447" VerticalAlignment="Top"/>
                         <local:TextBoxPlaceHolder x:Name="PMass" Height="20" Margin="10,4.5,10,0" VerticalAlignment="Top" Grid.Column="1"/>
@@ -60,10 +61,12 @@
                             <ComboBoxItem Content="Date 2" FontSize="20" FontFamily="Verdana" IsSelected="True"/>
                         </ComboBox>
                         <ListBox Grid.Column="0" Margin="10,82.394,10,0" BorderBrush="Black" BorderThickness="0.5"/>
-                        <Border Grid.Column="1" Margin="10,82.394,10,0" Background="White" BorderBrush="Black" BorderThickness="0.5"/>
+                        <Border Grid.Column="1" Margin="10,82.394,10,0" Background="White" BorderBrush="Black" BorderThickness="0.5">
+
+                        </Border>
                     </Grid>
                 </GroupBox>
-                <syncfusion:ButtonAdv HorizontalAlignment="Right" Height="30" Label="&#xF144;" Margin="0,0,113.5,0" VerticalAlignment="Bottom" IconHeight="0" IconWidth="0" Content="" FontFamily="/WindowsClient;component/_Data/_Fonts/#Font Awesome 5 Free Regular" HorizontalContentAlignment="Center" Width="30" BorderBrush="#FF707070" BorderThickness="0" FontSize="24" Padding="-6,0,0,0" VerticalContentAlignment="Center" Foreground="White" Grid.Column="1">
+                <syncfusion:ButtonAdv HorizontalAlignment="Right" Height="30" Label="&#xF144;" Margin="0,0,113.5,0" VerticalAlignment="Bottom" IconHeight="0" IconWidth="0" Content="" FontFamily="/WindowsClient;component/_Data/_Fonts/#Font Awesome 5 Free Regular" HorizontalContentAlignment="Center" Width="30" BorderBrush="#FF707070" BorderThickness="0" FontSize="24" Padding="-6,0,0,0" VerticalContentAlignment="Center" Foreground="White" Grid.Column="1" Click="ButtonCalculate_Click">
                     <syncfusion:ButtonAdv.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF405089"/>
@@ -104,6 +107,10 @@
                 </syncfusion:SfMap.Layers>
             </syncfusion:SfMap>
         </Border>
-        <Border Margin="10,10,10.5,10" Grid.Row="2" Grid.ColumnSpan="3" Background="White" BorderBrush="Black" BorderThickness="0.5"/>
+        <Border Margin="10,10,10.5,10" Grid.Row="2" Grid.ColumnSpan="3" Background="White" BorderBrush="Black" BorderThickness="0.5">
+            <ScrollViewer x:Name="TxbCalculatorLogScroll" SizeChanged="TxbCalculatorLogScroll_SizeChanged">
+                <TextBlock x:Name="TxbCalculatorLog"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </UserControl>
