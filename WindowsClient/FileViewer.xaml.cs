@@ -15,11 +15,12 @@ using WindowsClient._Data._Actions;
 
 namespace WindowsClient
 {
-    /// <summary>
-    /// Interaction logic for FileViewer.xaml
-    /// </summary>
+    // [Class.FileViewer] - A Gui to show file contents.
     public partial class FileViewer : Window
     {
+        /// <summary> To create a Viewer in future.
+        /// 
+        /// </summary>
         public FileViewer()
         {
             InitializeComponent();
