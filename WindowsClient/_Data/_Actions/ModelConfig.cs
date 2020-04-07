@@ -16,7 +16,7 @@ namespace WindowsClient._Data._Actions
 
         public static void InsertAllInputs(float lat1, float lat2, float time)
         {
-            string folder = "C:/Users/BREWERTONTHIAGOOLIVE/Desktop";//_Data._Actions.DirectoryDialog.Path();
+            string folder = _Data._Actions.DirectoryDialog.Paths();
             // Filename  
             string fileName = "Model3d_newdens.for";
             string fullPath = folder + "/" + fileName;
@@ -51,13 +51,6 @@ namespace WindowsClient._Data._Actions
             MessageBox.Show(readLines[140 - 1]);
         }
 
-        public static void Compile(string directory, string compiler, string inputfilename, string outputfilename, string format)
-        {            Info.WindowStyle = ProcessWindowStyle.Hidden;
-            Info.FileName = "cmd.exe";
-            // if don't use [/C] don't work, u need add a directory string and input in Info.Arguments.
-            Info.Arguments = $"/C cd c:/Users/BREWERTONTHIAGOOLIVE/Desktop & {compiler} {inputfilename}.{format} -o {outputfilename}.{format}";
-            process.StartInfo = Info;
-            process.Start();
-        }
+
     }
 }
