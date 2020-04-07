@@ -170,6 +170,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="_Data\_Helpers\kepler2.for" />
+    <None Include="_Data\_Helpers\Model3d_newdens.for" />
     <None Include="_Data\_Maps\_World\World_Cities.dbf" />
     <None Include="_Data\_Maps\_World\World_Cities.prj" />
     <None Include="_Data\_Maps\_World\World_Cities.sbn" />
