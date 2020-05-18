@@ -12,6 +12,7 @@ namespace WindowsClient._Data._Actions
     // Manipulate OpenFileDialog Property
     class DirectoryDialog
     {
+        public static string defaultRepo = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".PIM");
         public static string Paths()
         {
             var filePath = string.Empty;
