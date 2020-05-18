@@ -18,10 +18,8 @@ namespace WindowsClient._Data._Actions
 
         public static void ShowFileContent(string fileName)
         {
-            string folder = Path.Combine(Environment.GetFolderPath(
-    Environment.SpecialFolder.ApplicationData), ".PIM");
             // Filename  
-            string fullPath = folder + "/" + fileName;
+            string fullPath = DirectoryDialog.defaultRepo + "/" + fileName;
             // Read the entire file.
             readText = File.ReadAllText(fullPath);
             FileViewer Content = new FileViewer();
