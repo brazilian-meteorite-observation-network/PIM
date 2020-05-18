@@ -104,6 +104,6 @@
                 </syncfusion:SfMap.Layers>
             </syncfusion:SfMap>
         </Border>
-        <Border Margin="10,10,10.5,10" Grid.Row="2" Grid.ColumnSpan="3" Background="White" BorderBrush="Black" BorderThickness="0.5"/>
+        <local:Console x:Name="CalculatorConsole" Margin="10,10,10.5,10" Grid.Row="2" Grid.ColumnSpan="3"/>
     </Grid>
 </UserControl>
