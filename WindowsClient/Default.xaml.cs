@@ -1,18 +1,7 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WindowsClient
 {
@@ -40,6 +29,8 @@ namespace WindowsClient
             na.Margin = new Thickness(0, 0, 165, 0);
             na.Background = (Brush)bc.ConvertFrom("#FFD3E556");
         }
+
+        #region defaultmenu
 
         private void MenuDefaultState()
         {
@@ -164,5 +155,7 @@ namespace WindowsClient
             string ss = _Data._Actions.DirectoryDialog.Paths();
             MessageBox.Show(ss);
         }
+
+        #endregion
     }
 }
