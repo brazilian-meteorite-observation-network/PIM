@@ -38,7 +38,7 @@
         </StackPanel>
         <Grid HorizontalAlignment="Left" Width="179" Background="White" Height="243" VerticalAlignment="Bottom">
             <Image Height="132" Margin="26,0,26,81" VerticalAlignment="Bottom" Source="_Data/_Media/_Img/bramon.png" Stretch="UniformToFill"/>
-            <Image Margin="40,0,40,44" Source="_Data/_Media/_Img/bramon-nome.png" Stretch="UniformToFill" Height="32" VerticalAlignment="Bottom"/>
+            <Image Margin="40,0,40,44" Source="_Data/_Media/_Img/bramon-nome-100x32.png" Stretch="UniformToFill" Height="32" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid x:Name="HomeForm" Margin="200,0,0,0" d:IsHidden="True">
             <Label Content="HOME" Margin="196,177,180,136.233" FontSize="72" RenderTransformOrigin="0.5,0.5" Foreground="#7F000000" UseLayoutRounding="False" d:LayoutRounding="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
