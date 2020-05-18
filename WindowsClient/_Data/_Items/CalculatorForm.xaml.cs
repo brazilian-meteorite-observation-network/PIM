@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WindowsClient._Data._Items
 {
@@ -45,7 +34,15 @@ namespace WindowsClient._Data._Items
 
         private void ButtonAdv_Click(object sender, RoutedEventArgs e)
         {
-            _Data._Actions.Actions.ShowFileContent("Model3d_newdens.for");
+            try
+            {
+                _Data._Actions.Actions.ShowFileContent("Model3d_newdens.for");
+                CalculatorConsole.Status(1, 0);
+            }
+            catch(Exception ex)
+            {
+                CalculatorConsole.Status(1, 0, ex.Message);
+            }
         }
     }
 }
