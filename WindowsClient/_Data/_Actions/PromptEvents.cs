@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace WindowsClient._Data._Actions
             Info.WindowStyle = ProcessWindowStyle.Hidden;
             Info.FileName = "cmd.exe";
             // if don't use [/C] don't work, u need add a directory string and input in Info.Arguments.
-            Info.Arguments = $"/C cd c:/Users/BREWERTONTHIAGOOLIVE/Desktop & {compiler} {inputfilename}.{format} -o {outputfilename}.{format}";
+            Info.Arguments = $"/C cd {DirectoryDialog.defaultRepo} & {compiler} {inputfilename}.{format} -o {outputfilename}.{format}";
             process.StartInfo = Info;
             process.Start();
         }
