@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="WindowsClient._Data._Items.HomeWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowsClient._Data._Items"
+             mc:Ignorable="d" 
+             d:DesignHeight="445" d:DesignWidth="615">
+    <Grid Background="#FFD9DBF0">
+        <Label Content="Showing data about:" HorizontalAlignment="Left" Margin="364.5,10,0,0" VerticalAlignment="Top" Foreground="#FF405089"/>
+        <ComboBox HorizontalAlignment="Left" Margin="485,14,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF405089">
+            <ComboBoxItem Content="GDOP-1" FontSize="10"/>
+        </ComboBox>
+    </Grid>
+</UserControl>
