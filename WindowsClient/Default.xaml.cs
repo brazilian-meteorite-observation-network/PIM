@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using WindowsClient._Data._Items;
 
 namespace WindowsClient
 {
@@ -13,6 +14,9 @@ namespace WindowsClient
         // Preloading Controls
         BrushConverter bc = new BrushConverter();
         Border na = new Border();
+
+        readonly HomeWindow home = new HomeWindow();
+        readonly CalculatorForm calc = new CalculatorForm();
 
         // Method Strings
         private string menuselectedtab { get; set; }
@@ -35,17 +39,9 @@ namespace WindowsClient
         private void MenuDefaultState()
         {
             // MainMenu buttons events
-            HomeForm.Visibility = Visibility.Hidden;
-            HomeForm.IsEnabled = false;
 
-            CalculatorForm.Visibility = Visibility.Hidden;
-            CalculatorForm.IsEnabled = false;
-
-            DbForm.Visibility = Visibility.Hidden;
-            DbForm.IsEnabled = false;
-
-            HelpForm.Visibility = Visibility.Hidden;
-            HelpForm.IsEnabled = false;
+            //CalculatorForm.Visibility = Visibility.Hidden;
+            //CalculatorForm.IsEnabled = false;
         }
 
         private void CatchName(object sender, MouseEventArgs e)
@@ -115,32 +111,28 @@ namespace WindowsClient
             HelpBtnGrid.Children.Remove(na);
             MenuDefaultState();
 
+            ContentGrid.Children.Clear();
+
             if (menuselectedtab == "HomeBtn")
             {
-                HomeForm.Visibility = Visibility.Visible;
                 HomeBtnGrid.Children.Add(na);
-                HomeForm.IsEnabled = true;
+                ContentGrid.Children.Add(home);
             }
 
             else if (menuselectedtab == "CalculatorBtn")
             {
-                CalculatorForm.Visibility = Visibility.Visible;
                 CalculatorBtnGrid.Children.Add(na);
-                CalculatorForm.IsEnabled = true;
+                ContentGrid.Children.Add(calc);
             }
 
             else if (menuselectedtab == "DbBtn")
             {
-                DbForm.Visibility = Visibility.Visible;
                 DbBtnGrid.Children.Add(na);
-                DbForm.IsEnabled = true;
             }
 
             else if (menuselectedtab == "HelpBtn")
             {
-                HelpForm.Visibility = Visibility.Visible;
                 HelpBtnGrid.Children.Add(na);
-                DbForm.IsEnabled = true;
             }
 
         }
