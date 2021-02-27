@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsClient", "WindowsClient\WindowsClient.csproj", "{8BA73547-86CD-4A4F-9320-773A5F50A1E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIMDesktopClient", "PIMDesktopClient\PIMDesktopClient.csproj", "{6253E39C-300E-4846-BFDE-35FA5F0E2030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIMServer", "PIMServer\PIMServer.csproj", "{98BFA579-23DB-40B0-B6A2-DC78F7525A01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIMWebClient", "PIMWebClient\PIMWebClient.csproj", "{441EF415-5370-461F-AF61-15E9EB124D86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8BA73547-86CD-4A4F-9320-773A5F50A1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BA73547-86CD-4A4F-9320-773A5F50A1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BA73547-86CD-4A4F-9320-773A5F50A1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BA73547-86CD-4A4F-9320-773A5F50A1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6253E39C-300E-4846-BFDE-35FA5F0E2030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6253E39C-300E-4846-BFDE-35FA5F0E2030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6253E39C-300E-4846-BFDE-35FA5F0E2030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6253E39C-300E-4846-BFDE-35FA5F0E2030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BFA579-23DB-40B0-B6A2-DC78F7525A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BFA579-23DB-40B0-B6A2-DC78F7525A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BFA579-23DB-40B0-B6A2-DC78F7525A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BFA579-23DB-40B0-B6A2-DC78F7525A01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441EF415-5370-461F-AF61-15E9EB124D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441EF415-5370-461F-AF61-15E9EB124D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441EF415-5370-461F-AF61-15E9EB124D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441EF415-5370-461F-AF61-15E9EB124D86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
