@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="_Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <None Remove="_Fonts\Font Awesome 5 Free-Solid-900.otf" />
+    <None Remove="_Media\_Img\bramon-nome-100x32.png" />
+    <None Remove="_Media\_Img\bramon-nome.png" />
+    <None Remove="_Media\_Img\bramon.png" />
+    <None Remove="_Media\_Img\commerce-and-shopping.png" />
+    <None Remove="_Media\_Img\img1.jpg" />
+    <None Remove="_Media\_Img\img2.jpg" />
+    <None Remove="_Media\_Img\img3.jpg" />
+    <None Remove="_Media\_Img\img4.jpg" />
+    <None Remove="_Media\_Img\internet.png" />
+    <None Remove="_Media\_Img\PIM-one.png" />
+    <None Remove="_Media\_Img\question.png" />
+    <None Remove="_Media\_Img\server.png" />
+    <None Remove="_Media\_Img\splash-screen-pim.png" />
+    <None Remove="_Media\_Img\world.map.plot.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="_Fonts\Font Awesome 5 Free-Regular-400.otf" />
+    <Resource Include="_Fonts\Font Awesome 5 Free-Solid-900.otf" />
+    <Resource Include="_Media\_Img\bramon-nome-100x32.png" />
+    <Resource Include="_Media\_Img\bramon-nome.png" />
+    <Resource Include="_Media\_Img\bramon.png" />
+    <Resource Include="_Media\_Img\commerce-and-shopping.png" />
+    <Resource Include="_Media\_Img\img1.jpg" />
+    <Resource Include="_Media\_Img\img2.jpg" />
+    <Resource Include="_Media\_Img\img3.jpg" />
+    <Resource Include="_Media\_Img\img4.jpg" />
+    <Resource Include="_Media\_Img\internet.png" />
+    <Resource Include="_Media\_Img\PIM-one.png" />
+    <Resource Include="_Media\_Img\question.png" />
+    <Resource Include="_Media\_Img\server.png" />
+    <Resource Include="_Media\_Img\splash-screen-pim.png" />
+    <Resource Include="_Media\_Img\world.map.plot.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="_Items\CalculatorForm.xaml.cs">
+      <DependentUpon>CalculatorForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_Items\Console.xaml.cs">
+      <DependentUpon>Console.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_Items\HomeWindow.xaml.cs">
+      <DependentUpon>HomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="_Items\TextBoxPlaceHolder.xaml.cs">
+      <DependentUpon>TextBoxPlaceHolder.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="_Items\CalculatorForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="_Items\Console.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="_Items\HomeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="_Items\TextBoxPlaceHolder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

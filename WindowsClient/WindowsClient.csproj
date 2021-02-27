@@ -106,7 +106,6 @@
     <Compile Include="_Data\_Actions\GlobalEnvironmentVariables.cs" />
     <Compile Include="_Data\_Actions\ModelConfig.cs" />
     <Compile Include="_Data\_Actions\PromptEvents.cs" />
-    <Compile Include="_Data\_Helpers\SQLite.cs" />
     <Compile Include="_Data\_Items\CalculatorForm.xaml.cs">
       <DependentUpon>CalculatorForm.xaml</DependentUpon>
     </Compile>
@@ -184,12 +183,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="_Data\_Maps\_World\World_Cities.dbf" />
-    <None Include="_Data\_Maps\_World\World_Cities.prj" />
-    <None Include="_Data\_Maps\_World\World_Cities.sbn" />
-    <None Include="_Data\_Maps\_World\World_Cities.sbx" />
-    <None Include="_Data\_Maps\_World\World_Cities.shp" />
-    <None Include="_Data\_Maps\_World\World_Cities.shx" />
     <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Regular-400.otf" />
     <Resource Include="_Data\_Fonts\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
@@ -214,10 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="_Data\_Media\_Img\world.map.plot.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="_Data\_Maps\_World\World_Cities.shp.xml" />
-    <Resource Include="_Data\_Maps\_World\World_Cities_README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SampleData\SampleDataSource\" />
