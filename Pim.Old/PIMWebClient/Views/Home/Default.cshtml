@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Inicial";
+}
+
+<div class="container">
+    <div class="MapViewer"></div> <!-- Here we will load the map -->
+    <form asp-controller="Home" asp-action="LoadInitialMapViewer">
+        <input type="text" placeholder="Initial point latitude" />
+        <input type="text" placeholder="Initial longitude" />
+        <input type="text" placeholder="Initial height(metric)" />
+        <input type="text" placeholder="Final point latitude" />
+        <input type="text" placeholder="Final longitude" />
+        <input type="text" placeholder="Final height(metric)" />
+        <input type="text" placeholder="Time Interval" />
+        <input type="text" placeholder="Density" />
+        <input type="text" placeholder="Mass" />
+    </form>
+</div>
