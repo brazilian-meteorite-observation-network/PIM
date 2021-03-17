@@ -1,0 +1,12 @@
+﻿<Application
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WindowsClient"
+             x:Class="WindowsClient.App"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Reference to fonts, <FontFamily x:Key="(internal name in font file, not file name)">directory in project#(internal font name again)</FontFamily> -->
+        <FontFamily x:Key="Font Awesome 5 Free Regular">_Fonts/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Regular</FontFamily>
+        <FontFamily x:Key="Font Awesome 5 Free Solid">_Fonts/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Solid</FontFamily>
+    </Application.Resources>
+</Application>

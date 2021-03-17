@@ -1,8 +1,0 @@
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\PIMDesktopClient.csprojAssemblyReference.cache
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\_Items\Console.g.cs
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\_Items\TextBoxPlaceHolder.g.cs
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\PIMDesktopClient_MarkupCompile.cache
-C:\Users\brewe\Projects\PIM\PIMDesktopClient\obj\Debug\netcoreapp3.1\PIMDesktopClient_MarkupCompile.lref
