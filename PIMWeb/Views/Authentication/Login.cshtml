@@ -1,34 +1,61 @@
 ﻿@model PIMWeb.Pages.Authentication.LoginModel
 @{
     ViewData["Title"] = "Login";
-    ViewData["CSS"] = "/css/Login.css";
-
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
+
 <body>
-    <div class="container col-md-10 mx-auto">
-        <form asp-controller="Authentication" asp-action="Login" class="row d-flex flex-column justify-content-center authentication-container mx-auto mt-5">
-            <div class="authentication-logo">
-                <img src="~/img/PIM-one.png" />
+    <div style="height: 100vh" class="d-flex align-items-center login-container">
+        <div class="container-fluid col-xl-7 col-sm-10 col-10 flex-wrap mx-auto d-flex align-items-center p-0 h-75 login">
+            <div class="w-50 px-5 login__forms">
+                <div class="d-flex justify-content-around login__tabs ">
+                    <h3 class="login__heading --active">Log in</h3>
+                    <h3 class="login__heading">Sign up</h3>
+                </div>
+
+                <form asp-controller="Authentication" asp-action="Login" class="login__form">
+
+                    <div class="form-group mt-4">
+                        <input type="text" id="user" name="user" placeholder="Username" class="form-control p-4" />
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <input type="password" placeholder="Password" class="form-control p-4" />
+                    </div>
+
+                    <div class="text-center login__checkbox ">
+                        <input type="checkbox" name="remember" value="remember" />
+                        <label for="remember" >Remember me</label>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" value="Login" class="btn btn-primary mt-4 login__btn" />
+                    </div>
+                </form>
+
             </div>
-            <h1 class="h2 text-center mb-4">Login</h1>
-            <div class="form-group ">
-                <label for="user">Usuário</label>
-                <input type="text" id="user" name="user" class="form-control" />
+
+            <div class="w-50 h-100 login__carousel">
+                <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item h-100 active">
+                            <img class="h-100 w-100"  src="" alt="First slide">
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img  class="h-100 w-100"  src="" alt="Second slide">
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img class="h-100 w-100"  src="" alt="Third slide">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="user">Senha</label>
-                <input type="password" class="form-control" />
-            </div>
-            <div>
-                <input type="submit" value="Entrar" class="btn btn-primary btn-block mt-4" />
-            </div>
-        </form>
+
+        </div>
     </div>
 </body>
-</html>
