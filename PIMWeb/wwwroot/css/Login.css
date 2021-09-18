@@ -1,16 +1,109 @@
-﻿.authentication-container {
-    margin-top: 30vh;
-    padding: 2rem;
-    border: 3px solid #f3f3f3;
-    border-radius: 0.5rem;
-    max-width: 400px;
-    background: #fff;
+﻿.login-container {
+    background: url(/media/images/login/login-bg.png);
+    background-size: cover;
 }
 
-.authentication-logo {
-    min-width: 200px;
+.login {
+    background: rgba(89, 89,89, 0.7);
+    border-bottom-left-radius: 16px;
+    border-radius: 16px
 }
 
-    .authentication-logo img {
-        width: 100%;
+.login__heading {
+    color: #A2A3BB;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-bottom: 4rem !important;
+}
+
+    .login__heading.--active {
+        color: #000;
     }
+
+        .login__heading.--active::after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background: #000;
+            position: relative;
+            top: 5px;
+        }
+
+
+.login__checkbox {
+    margin-top: 4rem;
+}
+
+    .login__checkbox label {
+        color: #fff;
+    }
+
+.login__btn {
+    background: #A2A3BB;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+    .login__btn:hover {
+        background: #9595B2;
+    }
+
+.login__carousel {
+    background: #3B3F69;
+    border-radius: 2%;
+}
+
+.carousel {
+    border-radius: 2%;
+}
+
+.carousel-inner {
+    border-radius: 2%;
+}
+
+.carousel img {
+    border-radius: 2%;
+}
+
+.carousel-indicators {
+    bottom: 15%;
+}
+
+    .carousel-indicators li {
+        border-radius: 50%;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+.login__carousel img {
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .login__forms {
+        width: 60% !important;
+    }
+
+    .login__carousel {
+        justify-self: flex-end;
+        width: 40% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .login__forms {
+        width: 100% !important;
+    }
+
+    .login__carousel {
+        display: none;
+    }
+}
