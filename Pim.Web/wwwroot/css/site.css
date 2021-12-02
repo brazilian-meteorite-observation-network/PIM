@@ -1,0 +1,72 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+:root {
+  --pim-strong-blue: #3B3F69;
+  --pim-strong-green: #418148;
+}
+
+/* Colors */
+
+.pim-bg-strong-green {
+  background-color: var(--pim-strong-green) !important;
+}
+
+.color-blue-strong {
+  background-color: var(--pim-strong-blue);
+}
+
+/* Borders */
+
+/* Forms */
+.pim-form-button {
+  border: 1px solid var(--pim-strong-green);
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+}
+
+.pim-form-button:hover {
+  cursor: pointer;
+}
+
+.pim-form-button:active {
+  border: 1px solid black;
+}
+
+.pim-form-label {
+  color: white;
+  font-family: "Roboto Light";
+  font-size: 14pt;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 5px;
+  width: 90%;
+}
+
+.pim-form-input {
+  border-radius: 5px;
+  border-style: none;
+  font-family: Roboto;
+  font-size: 14pt;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 5px;
+  width: 90%;
+}

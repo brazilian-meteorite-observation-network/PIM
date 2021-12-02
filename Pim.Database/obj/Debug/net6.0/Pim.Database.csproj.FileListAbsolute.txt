@@ -1,0 +1,15 @@
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\Pim.Database.exe
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\Pim.Database.deps.json
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\Pim.Database.runtimeconfig.json
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\Pim.Database.dll
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\ref\Pim.Database.dll
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\bin\Debug\net6.0\Pim.Database.pdb
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.csproj.AssemblyReference.cache
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.AssemblyInfoInputs.cache
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.AssemblyInfo.cs
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.csproj.CoreCompileInputs.cache
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.dll
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\ref\Pim.Database.dll
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.pdb
+C:\Users\brewe\OneDrive\Hobby\PIM\Pim.Database\obj\Debug\net6.0\Pim.Database.genruntimeconfig.cache

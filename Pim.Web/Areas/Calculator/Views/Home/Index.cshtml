@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - PIM</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/Pim.Web.styles.css" asp-append-version="true"/>
+
+    <link rel="stylesheet" href="~/lib/uikit/css/uikit.min.css"/>
+    <script src="~/lib/uikit/js/uikit.min.js"></script>
+    <script src="~/lib/uikit/js/uikit-icons.min.js"></script>
+</head>
+<body style="height: 100vh;">
+
+<div class="uk-grid-collapse" style="height: 100vh;" uk-grid>
+    <div class="uk-width-1-4@m color-blue-strong">
+        <form class="uk-grid-collapse uk-padding" uk-grid>
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label uk-text-nowrap" for="form-stacked-text">Initial latitude</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label uk-text-nowrap" for="form-stacked-text">Final latitude</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label uk-text-nowrap" for="form-stacked-text">Initial longitude</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label uk-text-nowrap" for="form-stacked-text">Final longitude</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">Initial Height</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">Final Height</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <hr class="uk-"/>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">Time</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">Density</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">Meteor mass</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-2@m uk-padding-small">
+                <label class="pim-form-label" for="form-stacked-text">--</label>
+                <div class="uk-form-controls">
+                    <input class="pim-form-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                </div>
+            </div>
+
+            <div class="uk-width-1-1@m uk-padding-small">
+                <button class="pim-form-button uk-width-1-1 pim-bg-strong-green"><b>CALCULATE</b></button>
+            </div>
+        </form>
+    </div>
+    <div class="uk-width-expand@m">
+        <div class="uk-card uk-card-default uk-card-body uk-height-1-1">
+
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>
